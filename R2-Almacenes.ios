@@ -1,0 +1,23 @@
+! CONFIGURACIÓN DEL ÁREA: ALMACENES
+! Responsable: Ginger Yangaré 
+! Entrar al modo de configuración global
+configure terminal
+
+! Definir el nombre del dispositivo 
+hostname almacen
+
+! --- Configuración de Interfaz LAN (Hacia PC-Almacen) ---
+! Según la tabla de direccionamiento es la G0/0 
+interface GigabitEthernet0/0
+ description Conexion_LAN_Almacen
+ ip address 172.25.20.1 255.255.255.0 
+ no shutdown 
+ exit
+
+! **************************************
+! INFORMACIÓN DE REFERENCIA PARA EL HOST 
+! PC-Almacen IP: 172.25.20.10 
+! Máscara: 255.255.255.0 
+! Gateway: 172.25.20.1 
+! Conexión física: Patchcord de PC a G0/0 
+! **************************************
