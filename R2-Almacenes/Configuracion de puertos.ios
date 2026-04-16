@@ -1,0 +1,6 @@
+! --- Configuración de IP a puertos seriales  ---
+! Según la tabla de direccionamiento es la s0/0/0
+int s0/0/0
+  ip address 10.0.0.6 255.255.255.252
+  no shutdown
+  exit

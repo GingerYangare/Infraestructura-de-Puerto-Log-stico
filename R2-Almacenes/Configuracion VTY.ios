@@ -1,0 +1,8 @@
+!ACCESO REMOTO (VTY) 
+
+line vty 0 4
+ ! Bloquea el acceso por Telnet (inseguro) y permite solo SSH
+ transport input ssh 
+ ! Valida las credenciales contra la base de datos de usuarios local
+ login local
+exit

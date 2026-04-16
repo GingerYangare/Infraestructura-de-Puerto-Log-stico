@@ -1,0 +1,7 @@
+! CONFIGURACION DE ENRUTAMIENTO (EIGRP)
+router eigrp 50
+ network 172.25.20.0
+ network 10.0.0.4
+ passive-interface fa0/0
+ no auto-summary
+exit
