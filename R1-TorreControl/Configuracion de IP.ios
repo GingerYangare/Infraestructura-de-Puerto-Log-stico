@@ -1,0 +1,19 @@
+! ***************************************************************
+! INFORMACIÓN DE REFERENCIA PARA EL HOST 
+! Dispositivo: PC-TORRE
+! Responsable: Ricardo Paz
+! IP: 172.25.10.10 
+! Máscara: 255.255.255.0 
+! Gateway: 172.25.10.1 
+! ***************************************************************
+! Entrar al modo de configuración global
+configure terminal
+
+! Definir el nombre del dispositivo 
+hostname aduana
+
+! --- Configuración de Interfaz LAN (Hacia Red de Aduana) ---
+interface GigabitEthernet0/0
+ ip address 172.25.10.1 255.255.255.0 
+ no shutdown 
+ exit

@@ -1,0 +1,8 @@
+! CONFIGURACION DE SEGURIDAD (SSH)
+ip domain-name puerto.local
+username supervisor secret cisco123
+
+! Nota: El comando 'crypto key' no se guarda literalmente en el running-config, 
+! pero es vital documentar el tamaño de la llave.
+
+crypto key generate rsa

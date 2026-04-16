@@ -1,0 +1,19 @@
+! --- Configuración de IP a puertos seriales  ---
+! Según la tabla de direccionamiento es la s0/0/0
+
+!R1 s0/0/0 ↔ R3 s0/0/0
+!Red: 10.0.0.0/30
+
+int s0/0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+exit
+
+!R1 s0/0/1 ↔ R2 s0/0/0
+!Red: 10.0.0.4/30
+
+int s0/0/1
+ ip address 10.0.0.5 255.255.255.252
+ clock rate 64000
+ no shutdown
+exit

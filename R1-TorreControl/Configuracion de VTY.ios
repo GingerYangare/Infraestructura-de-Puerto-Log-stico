@@ -1,0 +1,6 @@
+!ACCESO REMOTO (VTY)
+line vty 0 4
+ transport input ssh
+ login local
+ access-class 10 in
+ access-list 10 permit 172.25.10.10
