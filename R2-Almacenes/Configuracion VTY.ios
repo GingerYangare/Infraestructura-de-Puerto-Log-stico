@@ -1,8 +1,12 @@
 !ACCESO REMOTO (VTY) 
-
 line vty 0 4
  ! Bloquea el acceso por Telnet (inseguro) y permite solo SSH
  transport input ssh 
  ! Valida las credenciales contra la base de datos de usuarios local
  login local
+ ! Aplica la ACL 10 para filtrar quién puede intentar la conexión
+ access-class 10 in
+ ! Cambia la IP 172.25.10.10 por la IP de tu equipo de gestión
+ access-list 10 permit 172.25.10.10
+ ! Nota: Al final de la lista hay un 'deny any' implícito
 exit
